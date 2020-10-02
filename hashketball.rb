@@ -142,7 +142,7 @@ def shoe_size(name)
   
   game_hash[:away][:players].concat(game_hash[:home][:players]).each do |p|
     if p[:player_name] == name 
-      return p[:points]
+      return p[:shoe_size]
     end
   end 
 end
