@@ -149,12 +149,9 @@ end
 
 
 def team_colors(name)
-  
-  game_hash[:away][].concat(game_hash[:home][:players]).each do |p|
-    if p[:player_name] == name 
-      return p[:shoe]
-    end
-  end 
+  if name == "away":
+    return game_hash[:away][:colors]
+  return game_hash[:home][:colors]
 end
   
 end
