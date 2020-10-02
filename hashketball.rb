@@ -147,6 +147,12 @@ def shoe_size(name)
   end 
 end
 
+def team_by_name(name)
+  if name == "Brooklyn Nets"
+    return game_hash[:home]
+  end
+  return game_hash[:away]
+end
 
 def team_colors(name)
   if name == "Brooklyn Nets"
@@ -161,11 +167,12 @@ end
 
 def player_numbers(name)
   result = Array.new
-  game_hash[:away][:players].concat(game_hash[:home][:players]).each do |p|
-    if p[:player_name] == name 
-      return p[:shoe]
-    end
+  team_by_name(name)[:players]).each do |p|
+    
+      result.push(p[:number])
+    
   end 
+  return result
 end
 
 def player_stats
