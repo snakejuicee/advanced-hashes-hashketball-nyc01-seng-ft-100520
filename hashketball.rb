@@ -131,6 +131,10 @@ end
 
 def num_points_scored(name)
   
+  game_hash["away"].concat(game_hash["home"]).each do |p|
+    if p['player_name'] == name:
+      return p['points']
+  end 
 end
 
 def shoe_size
