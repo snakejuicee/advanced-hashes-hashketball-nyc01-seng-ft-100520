@@ -139,7 +139,11 @@ def num_points_scored(name)
 end
 
 def shoe_size
-  
+  game_hash[:away][:players].concat(game_hash[:home][:players]).each do |p|
+    if p[:player_name] == name 
+      return p[:shoe_size]
+    end
+  end 
 end
 
 def team_colors
