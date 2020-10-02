@@ -159,8 +159,13 @@ def team_names
   return [game_hash[:home][:team_name], game_hash[:away][:team_name]]
 end
 
-def player_numbers
-  
+def player_numbers(name)
+  result = Array.new
+  game_hash[:away][:players].concat(game_hash[:home][:players]).each do |p|
+    if p[:player_name] == name 
+      return p[:shoe]
+    end
+  end 
 end
 
 def player_stats
