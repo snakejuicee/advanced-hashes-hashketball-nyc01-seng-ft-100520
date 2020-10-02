@@ -155,10 +155,8 @@ def team_by_name(name)
 end
 
 def team_colors(name)
-  if name == "Brooklyn Nets"
-    return game_hash[:home][:colors]
-  end
-  return game_hash[:away][:colors]
+  return team_by_name(name)[:colors]
+  
 end
 
 def team_names
@@ -168,7 +166,6 @@ end
 def player_numbers(name)
   result = Array.new
   team_by_name(name)[:players]).each do |p|
-    
       result.push(p[:number])
     
   end 
