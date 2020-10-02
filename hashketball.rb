@@ -167,7 +167,8 @@ def player_numbers(name)
   result = Array.new
   team_by_name(name)[:players]).each do |p|
       result.push(p[:number])
-  end 
+  end
+  
   return result
 end
 
