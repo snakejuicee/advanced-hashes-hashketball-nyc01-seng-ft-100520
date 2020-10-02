@@ -148,7 +148,14 @@ def shoe_size(name)
 end
 
 
-def team_colors
+def team_colors(name)
+  
+  game_hash[:away][].concat(game_hash[:home][:players]).each do |p|
+    if p[:player_name] == name 
+      return p[:shoe]
+    end
+  end 
+end
   
 end
 
