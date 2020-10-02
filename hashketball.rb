@@ -181,7 +181,7 @@ def player_stats(name)
   end 
 end
 
-def big_shoe_rebounds(name)
+def big_shoe_rebounds()
   pl = game_hash[:away][:players].concat(game_hash[:home][:players])
   
   player = nil
